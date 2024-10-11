@@ -1,0 +1,59 @@
+<launch>
+
+  <arg name="bug" />
+
+  <node pkg="test_roslaunch_required" type="no_operation" name="no_operation"
+        required="true"
+        output="screen" />
+
+  <group unless="$(arg bug)">
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print1"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print2"
+          output="screen"/>
+  </group>
+
+  <group if="$(arg bug)">
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print1"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print2"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print3"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print4"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print5"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print6"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print7"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print8"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print9"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print10"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print11"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print12"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print13"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print14"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print15"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print16"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print17"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print18"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print19"
+          output="screen"/>
+    <node pkg="test_roslaunch_required" type="periodic_print" name="periodic_print20"
+          output="screen"/>
+  </group>
+
+</launch>
